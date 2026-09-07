@@ -17,3 +17,20 @@ dependencies = [
     "seaborn>=0.13",
     "statsmodels>=0.14",
 ]
+
+[project.optional-dependencies]
+# Extra stack for the v2 labs. Only 02_finetune_embeddings.ipynb needs it.
+# pytorch-widedeep and doubleml-deep are installed separately -- see v2/README.md,
+# the former with --no-deps because it pins numpy<2.
+v2 = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "lightning>=2.0",
+    "torchmetrics>=1.0",
+    "transformers>=4.35",
+    "einops",
+    "wrapt",
+    "opencv-python-headless",
+    "pillow",
+    "pyarrow>=15.0",
+]

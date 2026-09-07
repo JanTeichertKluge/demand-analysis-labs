@@ -1,1 +1,5 @@
 .venv
+data_cache/
+subsample_v2.parquet
+logs/
+_wd_shim/
