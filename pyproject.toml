@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 dependencies = [
     "datasets>=3.1.0",
     "doubleml>=0.10",
+    "doubleml-deep @ git+https://github.com/DoubleML/doubleml-deep.git",
     "ipykernel>=6.0",
     "jupyter>=1.0",
     "lightgbm>=4.6.0",
@@ -16,13 +17,6 @@ dependencies = [
     "scipy>=1.17",
     "seaborn>=0.13",
     "statsmodels>=0.14",
-]
-
-[project.optional-dependencies]
-# Extra stack for the v2 labs. Only 02_finetune_embeddings.ipynb needs it.
-# pytorch-widedeep and doubleml-deep are installed separately -- see v2/README.md,
-# the former with --no-deps because it pins numpy<2.
-v2 = [
     "torch>=2.0",
     "torchvision>=0.15",
     "lightning>=2.0",
@@ -33,4 +27,5 @@ v2 = [
     "opencv-python-headless",
     "pillow",
     "pyarrow>=15.0",
+    "pytorch-widedeep",
 ]
